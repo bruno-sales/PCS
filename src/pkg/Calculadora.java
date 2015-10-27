@@ -56,8 +56,10 @@ public class Calculadora {
     public static void Export(JFreeChart chart) {
         try {
             ChartUtilities.saveChartAsJPEG(new File("chart.jpg"), chart, 500, 300);
-        } catch (IOException e) {
-            System.err.println("Problem occurred creating chart.");
+            System.out.println("Grafico gerado com sucesso");
+        } catch (IOException e) 
+        {
+            System.err.println("Ocorreu um erro ao criar grafico: " + e.getMessage());
         }
     }
 
